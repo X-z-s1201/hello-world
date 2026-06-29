@@ -20,114 +20,82 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 40px;
+            padding: 16px 180px;
             border-bottom: 1px solid #eee;
-            position: relative;
-        }
-        /* 右上角求源代码文字 */
-        .source-tag {
-            position: absolute;
-            right: 10px;
-            top: 4px;
-            font-size: 12px;
-            color: #999;
         }
         .logo {
             display: flex;
             align-items: center;
-            font-size: 20px;
+            font-size: 28px;
             font-weight: bold;
-            gap: 6px;
-            color: #ff7700;
-        }
-        .logo span:first-child {
-            font-size: 24px;
+            gap: 8px;
         }
         .nav a {
-            margin-left: 28px;
+            margin-left: 26px;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 17px;
             color: #333;
             cursor: pointer;
         }
         .nav a.active {
-            color: #ff7700;
+            color: #c82423;
         }
 
         /* 轮播横幅 */
         .banner {
             width: 100%;
-            height: 480px;
+            height: 540px;
+            background: #cccccc;
             position: relative;
-            overflow: hidden;
-        }
-        .banner-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
         }
         .text-box {
             position: absolute;
-            left: 36px;
-            bottom: 80px;
+            left: 140px;
+            top: 200px;
             color: white;
-            text-shadow: 0 0 8px rgba(0,0,0,0.6);
         }
         .text-box h2 {
-            font-size: 26px;
-            margin-bottom: 8px;
+            font-size: 42px;
+            margin-bottom: 12px;
         }
         .text-box p {
-            font-size: 14px;
-            opacity: 0.95;
+            font-size: 20px;
         }
         .left-btn, .right-btn {
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);
-            width: 36px;
-            height: 36px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
-            background: rgba(255,255,255,0.6);
-            color: #222;
+            background: rgba(0,0,0,0.35);
+            color: #fff;
             text-align: center;
-            line-height: 36px;
-            font-size: 18px;
+            line-height: 42px;
+            font-size: 20px;
             cursor: pointer;
-            border: none;
         }
-        .left-btn {left: 16px;}
-        .right-btn {right: 16px;}
+        .left-btn {left: 22px;}
+        .right-btn {right: 22px;}
         .circle-dots {
             position: absolute;
-            bottom: 20px;
+            bottom: 24px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 8px;
+            gap: 10px;
         }
         .dot {
-            width: 10px;
-            height: 10px;
+            width: 13px;
+            height: 13px;
             border-radius: 50%;
             background: #fff;
             opacity: 0.5;
         }
         .dot.active {opacity: 1;}
 
-        /* 横幅下方介绍文字栏 */
-        .banner-desc-bar {
-            width: 100%;
-            padding: 14px 0;
-            text-align: center;
-            font-size: 14px;
-            color: #333;
-            border-top: 1px solid #eee;
-        }
-
         /* 页面内容区域 */
         .page-content {
-            padding: 40px 40px;
+            padding: 45px 180px;
         }
         .page {
             display: none; /* 默认全部隐藏 */
@@ -137,26 +105,14 @@
         }
         .page h2 {
             text-align: center;
-            font-size: 30px;
-            margin-bottom: 24px;
-        }
-        .page p {
-            font-size: 16px;
-            line-height: 1.8;
-        }
-
-        /* 模拟浏览器底部任务栏 */
-        .browser-bottom {
-            width: 100%;
-            height: 28px;
-            background: #1f1f1f;
+            font-size: 35px;
+            margin-bottom: 30px;
         }
     </style>
 </head>
 <body>
     <!-- 顶部导航 -->
     <header>
-        <div class="source-tag">求源代码</div>
         <div class="logo">
             <span>🦊</span>
             <span>疯狂动物城</span>
@@ -166,19 +122,18 @@
             <a class="nav-item" data-page="works">作品</a >
             <a class="nav-item" data-page="role">角色</a >
             <a class="nav-item" data-page="contact">联系我们</a >
+            <a>登录</a >
         </div>
     </header>
 
     <!-- 大图轮播 -->
     <div class="banner">
-        <button class="left-btn">&lt;</button>
-        <!-- 全球CDN高清海报图 -->
-        < img class="banner-img" src="https://pic.baike.soso.com/ugc/baikepic2/31624/20230512154331-1410294444_png_1080_607_100140.jpg" alt="疯狂动物城主视觉">
+        <div class="left-btn">&lt;</div>
+        <div class="right-btn">&gt;</div>
         <div class="text-box">
             <h2>欢迎来到疯狂动物城</h2>
-            <p>一个哺乳动物共存的乌托邦世界</p >
+            <p>一个哺乳动物共存的乌托邦</p >
         </div>
-        <button class="right-btn">&gt;</button>
         <div class="circle-dots">
             <div class="dot active"></div>
             <div class="dot"></div>
@@ -187,38 +142,32 @@
         </div>
     </div>
 
-    <!-- 横幅底部文字 -->
-    <div class="banner-desc-bar">关于《疯狂动物城》</div>
-
     <!-- 多页面内容 -->
     <div class="page-content">
         <!-- 首页 -->
         <div id="home" class="page show">
-            <h2>影片简介</h2>
-            <p>疯狂动物城是一座独一无二的现代动物都市。在这里，食肉动物和食草动物和平共处。兔子朱迪从小梦想成为一名警察，她冲破物种偏见，和街头狐狸尼克携手，联手破解惊天大案。</p >
+            <h2>关于《疯狂动物城》</h2>
+            <p>疯狂动物城是一座独一无二的现代动物都市。在这里，食肉动物和食草动物和平共处。兔子朱迪从小梦想成为一名警察，她冲破偏见，和狐狸尼克一起侦破大案。</p >
         </div>
 
         <!-- 作品页 -->
         <div id="works" class="page">
-            <h2>影视作品合集</h2>
-            <p>收录《疯狂动物城》院线正片、番外短片《疯狂动物城+》、衍生动画剧集等全部官方内容。</p >
+            <h2>影视作品</h2>
+            <p>《疯狂动物城》正片、番外短片、衍生动画剧集全部收录。</p >
         </div>
 
         <!-- 角色页 -->
         <div id="role" class="page">
-            <h2>经典角色介绍</h2>
-            <p>兔子朱迪、狐狸尼克、树懒闪电、牛局长狮市长、大先生等全部核心角色完整人物档案。</p >
+            <h2>主要角色</h2>
+            <p>兔子朱迪、狐狸尼克、树懒闪电、牛局长等经典角色介绍。</p >
         </div>
 
         <!-- 联系我们页 -->
         <div id="contact" class="page">
-            <h2>合作与咨询</h2>
-            <p>邮箱：service@zootopia-demo.com<br>咨询热线：010-12345678</p >
+            <h2>联系我们</h2>
+            <p>邮箱：service@zootopia.com<br>电话：010-12345678</p >
         </div>
     </div>
-
-    <!-- 模拟浏览器底部黑栏 -->
-    <div class="browser-bottom"></div>
 
 <script>
     // 获取所有导航按钮和页面
