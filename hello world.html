@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>疯狂动物城官网</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background-color: #fff;
+        }
+        /* 顶部导航栏 */
+        header {
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 32px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff7800;
+        }
+        .logo img {
+            height: 28px;
+        }
+        .nav-list {
+            display: flex;
+            gap: 36px;
+        }
+        .nav-list a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        .nav-list a.active {
+            color: #ff7800;
+        }
+        .source-tag {
+            font-size: 13px;
+            color: #888;
+        }
+        /* 横幅轮播区域 */
+        .banner {
+            width: 100%;
+            height: 480px;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .banner-text {
+            position: absolute;
+            left: 40px;
+            bottom: 80px;
+            color: #fff;
+            text-shadow: 0 0 6px rgba(0,0,0,0.6);
+        }
+        .banner-title {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        .banner-desc {
+            font-size: 14px;
+            opacity: 0.95;
+        }
+        /* 左右切换按钮 */
+        .slide-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.7);
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #333;
+        }
+        .prev-btn {
+            left: 20px;
+        }
+        .next-btn {
+            right: 20px;
+        }
+        /* 底部介绍栏 */
+        .intro-bar {
+            width: 100%;
+            text-align: center;
+            padding: 16px 0;
+            background: #fff;
+            font-size: 15px;
+            color: #333;
+            border-top: 1px solid #eee;
+        }
+        /* 模拟浏览器底部任务栏 */
+        .browser-footer {
+            height: 30px;
+            background: #222222;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航头部 -->
+    <header>
+        <div class="logo">
+            <!-- 在线疯狂动物城logo图片 -->
+            < img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Zootopia_logo.png/800px-Zootopia_logo.png" alt="疯狂动物城logo">
+            <span>疯狂动物城</span>
+        </div>
+        <div class="nav-list">
+            <a href=" " class="active">首页</a >
+            <a href="#">作品</a >
+            <a href="#">角色</a >
+            <a href="#">联系我们</a >
+        </div>
+        <div class="source-tag">求源代码</div>
+    </header>
+
+    <!-- 轮播横幅区域（高清官方海报图） -->
+    <section class="banner">
+        <button class="slide-btn prev-btn">&lt;</button>
+        <!-- 高清朱迪尼克横幅背景图 -->
+        < img class="banner-img" src="https://pic.netbian.com/uploads/allimg/251202/000342-1764662622444d.jpg" alt="疯狂动物城主视觉">
+        <div class="banner-text">
+            <div class="banner-title">欢迎来到疯狂动物城</div>
+            <div class="banner-desc">一个哺乳动物共存的乌托邦世界</div>
+        </div>
+        <button class="slide-btn next-btn">&gt;</button>
+    </section>
+
+    <!-- 底部文字介绍 -->
+    <div class="intro-bar">
+        关于《疯狂动物城》
+    </div>
+
+    <!-- 模拟浏览器底部任务栏 -->
+    <div class="browser-footer"></div>
+</body>
+</html>
